@@ -26,7 +26,24 @@ window.onload = function () {
   const twitter = list.getElementsByTagName('li')[1]
 
   list.removeChild(twitter)
+
+  //The below add event listeners onload for later exercises
+
+  const olderButton = document.querySelector('.blog-pagination > a')
+  olderButton.setAttribute('onclick', 'removeOldPost()')
+
+  const author = document.querySelectorAll('.blog-post-meta > a')
+  for (let i = 0; i < author.length; i++) {
+    author[i].setAttribute('onmouseover', 'showAuthor(event)')
+  }
+
+  const cardLinks = document.querySelectorAll('.stretched-link')
+  for (let i = 0; i < cardLinks.length; i++) {
+    cardLinks[i].setAttribute('onclick', 'deleteCard(event)')
+  }
 }
+
+//End of adding event listeners
 
 //Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
 
@@ -53,6 +70,25 @@ function addNewPost() {
 
   body.prepend(content)
   body.prepend(blogTitle)
+}
 
-  console.log(body)
+//Write a JavaScript functionality to remove the last Blog Post when the user clicks on the “Older” button
+function removeOldPost() {
+  let body = document.querySelectorAll('main .blog-post')
+  body = body[body.length - 1]
+
+  body.remove()
+}
+
+//Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author’s name
+function showAuthor(event) {
+  alert('The author of this post is: ' + event.target.innerText)
+}
+
+//EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
+
+function deleteCard(event) {
+  const card = event.currentTarget
+  card.parentElement.parentElement.remove()
+  console.log(card)
 }
