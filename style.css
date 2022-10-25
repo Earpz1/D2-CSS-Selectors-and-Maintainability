@@ -14,11 +14,11 @@
 
 /* 4) Write a selector to target the first blogpost */
 
-.blog-main div:first-of-type {
+.blog-post:first-of-type {
 }
 
 /* 4) Write a selector to target the first blogpost <hr> and turn it red */
-.blog-main div:first-of-type .blog-post-meta > a {
+hr:first-of-type {
 }
 
 /* 6) Write a selector to target the “even” links in the navbar */
@@ -35,7 +35,8 @@
 }
 
 /* 9) Write a selector to target the second <li> in the third blog-post unordered-list */
-.blog-post:nth-child(4) > ul > li:nth-child(3) {
+.blog-post:nth-child(4) > ul > li:nth-child(2) {
+  color: red;
 }
 
 /* 10) Write a selector to target the “back to top” link you can find at the bottom-right corner */
