@@ -1,0 +1,51 @@
+/* 1) Write a selector to target the h1 in the first “hero” section */
+
+.display-4 {
+}
+
+/* 2) Write a selector to target every children of the navbar */
+
+.nav > * {
+}
+
+/* 3) Write a selector to target the “continue reading…” inside the jumbotron */
+.lead a {
+}
+
+/* 4) Write a selector to target the first blogpost */
+
+.blog-main div:first-of-type {
+}
+
+/* 4) Write a selector to target the first blogpost <hr> and turn it red */
+.blog-main div:first-of-type .blog-post-meta > a {
+}
+
+/* 6) Write a selector to target the “even” links in the navbar */
+.nav > span:nth-child(even) {
+}
+
+/* 7) Write a selector to target all the <li> into the first ordered-list in the sidebar ( Archives ) */
+.mb-0 > li {
+}
+
+/* 8) Write a selector to target the second blog-post author */
+
+.blog-post-meta:nth-child(2) > a {
+}
+
+/* 9) Write a selector to target the second <li> in the third blog-post unordered-list */
+.blog-post:nth-child(4) > ul > li:nth-child(3) {
+}
+
+/* 10) Write a selector to target the “back to top” link you can find at the bottom-right corner */
+body > a:last-of-type {
+}
+
+/* 11) Write a selector to target the “Newer” button at the bottom */
+.blog-pagination a:nth-child(2) {
+}
+
+/* 12) Write a selector to target the footer’s second link */
+a[href*='twitter'] {
+}
